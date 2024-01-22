@@ -12,6 +12,7 @@
 
 ## 메모이제이션 사용
 ### O(n)
+배열에다가 저장하는 방법
 ```python
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
@@ -76,7 +77,8 @@ class Solution:
 ```
 
 ## 최적화 된 코드
-### O(n)
+### O(1)
+배열에 저장하는 방법이 아닌 코드에 직전 값에 바로바로 합쳐줌
 ```python
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
