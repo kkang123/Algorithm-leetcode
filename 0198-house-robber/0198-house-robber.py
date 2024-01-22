@@ -14,3 +14,6 @@ class Solution:
 
         return dp[-1]
         
+#          [2,7,9,3,1]
+            
+#             7, 2+ 7
