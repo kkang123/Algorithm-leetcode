@@ -11,8 +11,9 @@ class Solution:
 
 
 
-
-        
+# 2
+# class Solution:
+#     def maxSubArray(self, nums: List[int]) -> int:
         # dp = [0] * len(nums)
         # dp[0] = nums[0]
         # max_sum =dp[0]
