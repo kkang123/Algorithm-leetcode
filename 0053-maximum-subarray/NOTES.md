@@ -6,6 +6,7 @@
 ### 효율적인 투 포인터 풀이하기 위해서는 `정렬`이 필요하다!​
 
 ## 메모이제이션 사용
+### O(n)
 ```python
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
@@ -37,6 +38,7 @@ sums.append(nums[i] + (sums[i-1] if sums[i-1] > 0 else 0))
 ```
 
 ## 똑같은 동적 프로그래밍(Dynamic Programming, DP) 알고리즘
+### O(n)
 ```python
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
@@ -66,4 +68,18 @@ class Solution:
 # dp = [-2, 1, -2, 4, 3, 5, 6, 1, 5]
 
 # 1, 1, 4, 4, 5, 6, 6, 6 - > 6
+```
+
+## 최적화 된 코드
+### O(n)
+```python
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        max_total = nums[0]
+        total = nums[0]
+
+        for i in range(1, len(nums)):
+            total = max(nums[i], total +nums[i])
+            max_total = max(total, max_total)
+        return max_total
 ```
