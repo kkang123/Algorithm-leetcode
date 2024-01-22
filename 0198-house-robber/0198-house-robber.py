@@ -1,7 +1,7 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        if not nums:
-            return 0
+        # if not nums:
+        #     return 0
         if len(nums) <= 2:
             return max(nums) # 배열이 2칸일 때 가장 큰 값 하나 반환
         
@@ -14,6 +14,16 @@ class Solution:
 
         return dp[-1]
         
-#          [2,7,9,3,1]
+# input = [2,7,9,3,1]
             
-#             7, 2+ 7
+# i= 2     7, 2+ 9 
+# i=3      11, 73
+# i=4      11, 11,1
+
+# dp[2, 7, 11, 11, 12]
+
+# dp[i-1] = 이전 집을 털었을 때 얻을 수 있는 돈의 최대합
+# dp[i-2] + nums[i] 현재 집과 이전 집을 털었을 때 최대합
+
+# dp[i-1]는 도둑이 이전 집을 털고 현재 집을 털지 않는 선택을, 
+# dp[i-2] + nums[i]는 도둑이 이전 집을 털지 않고 이전의 이전 집과 현재 집을 털어 더 많은 돈을 얻는 선택
